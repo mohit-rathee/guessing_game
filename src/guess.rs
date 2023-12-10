@@ -17,7 +17,7 @@ impl Secret {
             counter: max_count + 1,
         }
     }
-    pub fn check(&mut self, guess: u32) -> bool {
+    pub fn check(& self, guess: u32) -> bool {
         match self.value.cmp(&guess) {
             Ordering::Greater => {
                 print!("It's Smaller.\n");

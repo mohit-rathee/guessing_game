@@ -8,7 +8,10 @@ pub fn input(msg: &str) -> u32 {
             .expect("Can't Read Number");
         let value: u32 = match value.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {
+                println!("Enter digits only!!!");
+                continue;
+            },
         };
         return value;
     }
